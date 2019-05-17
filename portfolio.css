@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    bottom: 0;
+    background-image: url("imagem/1.jpg");
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+.main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.topnav {
+    opacity: 0.5;
+    overflow: hidden;
+    background-color: #333;
+    font-family: cursive;
+    align-items: center;
+    position: fixed;
+    width: 1200px;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #cc0052;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+img:hover {
+    color: black;
+}
+
+.cardapio {
+    height: 900px;
+}
+
+.shadow {
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+.home {
+    height: 650px;
+    width: 100%;
+}
+
+.scroll-pagina {
+    scroll-behavior: smooth;
+}
+
+.polaroid {
+    width: 20%;
+    margin: 20px 30px;
+    float: left;
+}
+
+.container {
+    padding: 10px;
+    background-color: lightpink;
+}
+
+.imagem-itens {
+    width: 240px;
+    height: 230px;
+}
+
+.localizacao {
+    height: 600px;
+}
+
+.contato {
+    height: 400px;
+}
+
+.mapa {
+    margin: 15px ;
+    height: 520px;
+}
+
+.component {
+    height: 30px; width: 450px; border-radius: 5px;
+    background-color: #ffe6ff;
+    margin-left: 50px;
+    margin-bottom: 15px;
+
+}
+
+label {
+    margin-top: 20px;
+    text-align: left;
+    font-family: cursive;
+    font-weight: bold;
+    color: #990073;
+}
+
+.fundo {
+    background-color: #ff99ff;
+}
+
+.sub-titulo {
+    text-align: left; padding-left: 50px
+}
+
+#descricao {
+    height: 150px !important;
+}
+
+.botao-enviar {
+    margin-left: 400px;
+    padding: 5px 30px
+}
+
+p {
+    font-family: cursive;
+    color: #990073;
+    size: 15px;
+    font-weight: bold;
+}
+
+div h1 {
+    margin: 0;
+    font-family: cursive;
+    color: #990073;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+form div {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
