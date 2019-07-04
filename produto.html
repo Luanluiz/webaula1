@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html class="scroll-pagina" lang="pt-br">
+<head>
+    <title>Miss Meiri</title>
+    <link rel="stylesheet" type="text/css" href="portfolio.css">
+    <link rel="stylesheet" type="text/css" href="menu.css">
+    <link rel="stylesheet" type="text/css" href="slide.css">
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"-->
+    <!--integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+
+
+<div id="navbar">
+    <label id="logo" class="logoMenu">MissMeiri Doceria</label>
+    <div id="navbar-right">
+        <a class="active" href="trabalhoM3.html">Inicio</a>
+        <a href="trabalhoM3.html#local">Localização</a>
+        <a href="trabalhoM3.html#contato">contato</a>
+        <a href="produto.html">Produtos</a>
+    </div>
+</div>
+
+<script>
+    // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+    window.onscroll = function () {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+            document.getElementById("navbar").style.padding = "5px 5px";
+            document.getElementById("navbar").style.fontSize = "15px";
+            document.getElementById("logo").style.fontSize = "20px";
+        } else {
+            document.getElementById("navbar").style.padding = "15px 10px";
+            document.getElementById("navbar").style.fontSize = "20px";
+            document.getElementById("logo").style.fontSize = "25px";
+        }
+    }
+</script>
+
+<div class="main shadow">
+
+    <div class="cardapio" id="cardapio">
+
+        <h1>Cardápio</h1>
+        <h1 class="subTitulo">Brigadeiros Tradicionais</h1>
+
+        <div class="polaroid shadow">
+            <img src="imagem/coco.jpg" alt="Norway" class="imagem-itens">
+            <div class="container">
+                <p>Brigadeiro de coco</p>
+            </div>
+        </div>
+
+        <div class="polaroid shadow">
+            <img src="imagem/tradicional.jpg" alt="Norway" class="imagem-itens">
+            <div class="container">
+                <p>Brigadeiro tradicional</p>
+            </div>
+        </div>
+
+        <div class="polaroid shadow">
+            <img src="imagem/amendoin.jpg" alt="Norway" class="imagem-itens">
+            <div class="container">
+                <p>Brigadeiro Amendoin</p>
+            </div>
+        </div>
+
+        <div class="polaroid shadow">
+            <img src="imagem/casadinho.jpg" alt="Norway" class="imagem-itens">
+            <div class="container">
+                <p>Brigadeiro casadinho</p>
+            </div>
+        </div>
+
+        <h1 class="subTitulo">Brigadeiros Gourmet</h1>
+
+        <div class="polaroid shadow">
+            <img src="imagem/laca.jpg" alt="Norway" class="imagem-itens">
+            <div class="container">
+                <p>Brigadeiro Laca com Orion</p>
+            </div>
+        </div>
+
+        <div class="polaroid shadow">
+            <img src="imagem/churros.jpg" alt="Norway" class="imagem-itens">
+            <div class="container">
+                <p>Brigadeiro de Churros</p>
+            </div>
+        </div>
+
+        <div class="polaroid shadow">
+            <img src="imagem/cafe.jpg" alt="Norway" class="imagem-itens">
+            <div class="container">
+                <p>Brigadeiro de Café</p>
+            </div>
+        </div>
+
+        <div class="polaroid shadow">
+            <img src="imagem/branco_goiabada.jpg" alt="Norway" class="imagem-itens">
+            <div class="container">
+                <p>Brigadeiro de Goiabada</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="shadow" style="bottom: 0px">
+        <img src="imagem/email-mkt-boas-festas-copiar_05.png">
+    </div>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+</div>
+
+
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementsByTagName("img");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+
+    for (i = 0; i < img.length; i++) {
+        img[i].onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+</script>
+
+</body>
+</html>
