@@ -1,9 +1,9 @@
 body {
     margin: 0;
     bottom: 0;
-    background-image: url("imagem/1.jpg");
-    background-repeat: repeat;
-    background-attachment: fixed;
+    /*background-image: url("imagem/1.jpg");*/
+    /*background-repeat: repeat;*/
+    /*background-attachment: fixed;*/
 }
 
 .main {
@@ -40,17 +40,12 @@ body {
     color: white;
 }
 
-img:hover {
-    color: black;
-}
-
 .cardapio {
     height: 900px;
 }
 
 .shadow {
     box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
 }
 
 .home {
@@ -80,10 +75,11 @@ img:hover {
 
 .localizacao {
     height: 600px;
+    margin-left: 25px;
 }
 
 .contato {
-    height: 400px;
+    height: 600px;
 }
 
 .mapa {
@@ -115,6 +111,10 @@ label {
     text-align: left; padding-left: 50px
 }
 
+.titulo {
+    text-align: center;
+}
+
 #descricao {
     height: 150px !important;
 }
@@ -124,11 +124,31 @@ label {
     padding: 5px 30px
 }
 
+.card {
+    transition: 0.5s;
+    width: 30%;
+    border-radius: 5px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+}
+
+.roda-pe-card {
+    padding: 2px 16px;
+}
+
+.card img {
+    border-radius: 5px 5px 0 0;
+}
+
 p {
     font-family: cursive;
     color: #990073;
     size: 15px;
     font-weight: bold;
+    text-align: center;
+    margin: 0;
 }
 
 div h1 {

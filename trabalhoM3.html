@@ -1,93 +1,175 @@
 <!DOCTYPE html>
 <html class="scroll-pagina">
 <head>
-    <title>Trabalho M3</title>
+    <title>Miss Meiri</title>
     <link rel="stylesheet" type="text/css" href="portfolio.css">
-    <link rel="stylesheet" type="text/css" href="portfolio.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="menu.css">
+    <link rel="stylesheet" type="text/css" href="slide.css">
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"-->
+    <!--integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body>
 
+<div id="navbar">
+    <a href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+</div>
+
 <div class="main shadow">
 
-    <div class="topnav">
-        <a href="#home">Inicio</a>
-        <a href="#cardapio">Cardápio</a>
-        <a href="#local">Localização</a>
-        <a href="#contato">Contato</a>
-    </div>
 
-    <div id="home" class="fundo">
-        <img src="imagem/imagem.jpg" alt="Norway" class="home">
-    </div>
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-50px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
 
-    <div class="cardapio fundo" id="cardapio">
 
-        <h1>Cardapio</h1>
-        <h1 class="subTitulo">Brigadeiros Tradicionais</h1>
+    <div class="slideshow-container">
 
-        <div class="polaroid shadow">
-            <img src="imagem/coco.jpg" alt="Norway" class="imagem-itens">
-            <div class="container">
-                <p>Brigadeiro de coco</p>
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="slide/1.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="slide/2.jpg" style="width:100%;">
+            <div class="content">
+                <h1>Heading</h1>
+                <p>Lorem ipsum..</p>
             </div>
         </div>
 
-        <div class="polaroid shadow">
-            <img src="imagem/tradicional.jpg" alt="Norway" class="imagem-itens">
-            <div class="container">
-                <p>Brigadeiro tradicional</p>
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="slide/3.jpg" style="width:100%;">
+            <div class="content">
+                <h1>Heading</h1>
+                <p>Lorem ipsum..</p>
             </div>
         </div>
 
-        <div class="polaroid shadow">
-            <img src="imagem/amendoin.jpg" alt="Norway" class="imagem-itens">
-            <div class="container">
-                <p>Brigadeiro Amendoin</p>
-            </div>
-        </div>
-
-        <div class="polaroid shadow">
-            <img src="imagem/casadinho.jpg" alt="Norway" class="imagem-itens">
-            <div class="container">
-                <p>Brigadeiro casadinho</p>
-            </div>
-        </div>
-
-        <h1 class="subTitulo">Brigadeiros Gourmet</h1>
-
-        <div class="polaroid shadow">
-            <img src="imagem/laca.jpg" alt="Norway" class="imagem-itens">
-            <div class="container">
-                <p>Brigadeiro Laca com Orion</p>
-            </div>
-        </div>
-
-        <div class="polaroid shadow">
-            <img src="imagem/churros.jpg" alt="Norway" class="imagem-itens">
-            <div class="container">
-                <p>Brigadeiro de Churros</p>
-            </div>
-        </div>
-
-        <div class="polaroid shadow">
-            <img src="imagem/cafe.jpg" alt="Norway" class="imagem-itens">
-            <div class="container">
-                <p>Brigadeiro de Café</p>
-            </div>
-        </div>
-
-        <div class="polaroid shadow">
-            <img src="imagem/branco_goiabada.jpg" alt="Norway" class="imagem-itens">
-            <div class="container">
-                <p>Brigadeiro de Goiabada</p>
-            </div>
-        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
     </div>
 
-    <div class="localizacao fundo" id="local">
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+    <!--<div class="cardapio fundo" id="cardapio">-->
+
+    <!--<h1>Cardapio</h1>-->
+    <!--<h1 class="subTitulo">Brigadeiros Tradicionais</h1>-->
+
+    <!--<div class="polaroid shadow">-->
+    <!--<img src="imagem/coco.jpg" alt="Norway" class="imagem-itens">-->
+    <!--<div class="container">-->
+    <!--<p>Brigadeiro de coco</p>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="polaroid shadow">-->
+    <!--<img src="imagem/tradicional.jpg" alt="Norway" class="imagem-itens">-->
+    <!--<div class="container">-->
+    <!--<p>Brigadeiro tradicional</p>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="polaroid shadow">-->
+    <!--<img src="imagem/amendoin.jpg" alt="Norway" class="imagem-itens">-->
+    <!--<div class="container">-->
+    <!--<p>Brigadeiro Amendoin</p>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="polaroid shadow">-->
+    <!--<img src="imagem/casadinho.jpg" alt="Norway" class="imagem-itens">-->
+    <!--<div class="container">-->
+    <!--<p>Brigadeiro casadinho</p>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <!--<h1 class="subTitulo">Brigadeiros Gourmet</h1>-->
+
+    <!--<div class="polaroid shadow">-->
+    <!--<img src="imagem/laca.jpg" alt="Norway" class="imagem-itens">-->
+    <!--<div class="container">-->
+    <!--<p>Brigadeiro Laca com Orion</p>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="polaroid shadow">-->
+    <!--<img src="imagem/churros.jpg" alt="Norway" class="imagem-itens">-->
+    <!--<div class="container">-->
+    <!--<p>Brigadeiro de Churros</p>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="polaroid shadow">-->
+    <!--<img src="imagem/cafe.jpg" alt="Norway" class="imagem-itens">-->
+    <!--<div class="container">-->
+    <!--<p>Brigadeiro de Café</p>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="polaroid shadow">-->
+    <!--<img src="imagem/branco_goiabada.jpg" alt="Norway" class="imagem-itens">-->
+    <!--<div class="container">-->
+    <!--<p>Brigadeiro de Goiabada</p>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <!--</div>-->
+
+    <div class="localizacao" id="local">
 
         <h1 class="titulo">Localização</h1>
 
@@ -97,35 +179,46 @@
 
     </div>
 
-    <div class="contato fundo" id="contato">
+    <div class="contato">
 
         <h1 class="titulo">Contato</h1>
 
         <p>Entre em contato para mais informações.</p>
         <p>Muitas novidades todos os dias.</p>
-        <form>
-            <div>
 
+        <div style="float: left; width: 50%; height: 350px">
 
-                <label for="nome">Nome completo:</label><br>
-                <input type="text" name="nome" id="nome" placeholder="Nome completo" class="component"><br>
-
-                <label for="fone">Telefone:</label><br>
-                <input type="number" name="fone" id="fone" placeholder="(00)0000-0000" class="component"><br>
-
-                <label for="email">E-mail:</label><br>
-                <input type="email" name="email" id="email" placeholder="exemplo@exemplo.com" class="component"><br>
-
+            <div class="card shadow">
+                <img src="Imagem/adm.jpg" alt="Avatar" style="width:100%">
+                <div class="roda-pe-card">
+                    <h4><b>Jane Doe</b></h4>
+                    <p>Interior Designer</p>
+                </div>
             </div>
 
-            <div>
+        </div>
+        <div style="float: left; width: 50%; height: 350px">
+            <form>
 
-                <label for="descricao">Descrição</label><br>
-                <textarea rows="10" cols="4" id="descricao" class="component"></textarea>
+                <div>
 
-                <input type="submit" name="salvar" value="Salvar" class="botao-enviar">
-            </div>
-        </form>
+                    <label for="nome">Nome completo:</label><br>
+                    <input type="text" name="nome" id="nome" placeholder="Nome completo" class="component"><br>
+
+                    <label for="fone">Telefone:</label><br>
+                    <input type="number" name="fone" id="fone" placeholder="(00)0000-0000" class="component"><br>
+
+                    <label for="email">E-mail:</label><br>
+                    <input type="email" name="email" id="email" placeholder="exemplo@exemplo.com" class="component"><br>
+
+                    <label for="descricao">Descrição</label><br>
+                    <textarea rows="10" cols="4" id="descricao" class="component"></textarea>
+
+                    <input type="submit" name="salvar" value="Salvar" class="botao-enviar">
+                </div>
+            </form>
+        </div>
+
 
     </div>
     <div class="shadow" style="bottom: 0px">
